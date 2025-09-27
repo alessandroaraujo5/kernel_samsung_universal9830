@@ -19,7 +19,7 @@ jobs:
         kernel-url: https://github.com/alessandroaraujo5/kernel_samsung_universal9830.git
         kernel-dir: main
         kernel-branch: main
-        config: exynos9830-r8slte_defconfig
+        config: exynos9830_defconfig
         arch: arm64
         aosp-gcc: true
         aosp-clang: true
