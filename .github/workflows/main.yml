@@ -52,13 +52,13 @@ jobs:
         chmod +x ./toolchain/mkbootimg
 
         # Copia kernel Image descompactado
-        cp kernel/lineage-22/out/arch/arm64/boot/Image build/out/$MODEL/
+        cp kernel/main/out/arch/arm64/boot/Image build/out/$MODEL/
 
         # Gera dtb.img
-        ./toolchain/mkdtimg cfg_create build/out/$MODEL/dtb.img build/dtconfigs/exynos9830.cfg -d kernel/lineage-22/out/arch/arm64/boot/dts/exynos
+        ./toolchain/mkdtimg cfg_create build/out/$MODEL/dtb.img build/dtconfigs/exynos9830.cfg -d kernel/main/out/arch/arm64/boot/dts/exynos
 
         # Gera dtbo.img
-        ./toolchain/mkdtimg cfg_create build/out/$MODEL/dtbo.img build/dtconfigs/$MODEL.cfg -d kernel/lineage-22/out/arch/arm64/boot/dts/samsung
+        ./toolchain/mkdtimg cfg_create build/out/$MODEL/dtbo.img build/dtconfigs/$MODEL.cfg -d kernel/main/out/arch/arm64/boot/dts/samsung
 
         # Gera ramdisk
         echo "Gerando RAMDisk..."
