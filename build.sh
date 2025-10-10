@@ -117,7 +117,7 @@ esac
 
 if [[ "$RECOVERY_OPTION" == "y" ]]; then
     RECOVERY=recovery.config
-    KSU_OPTION=n
+    KSU_OPTION=y
 fi
 
 if [ -z $KSU_OPTION ]; then
@@ -140,7 +140,7 @@ mkdir -p build/out/$MODEL/zip/META-INF/com/google/android
 echo "-----------------------------------------------"
 echo "Defconfig: "$KERNEL_DEFCONFIG""
 if [ -z "$KSU" ]; then
-    echo "KSU: N"
+    echo "KSU: Y"
 else
     echo "KSU: $KSU"
 fi
